@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskMind AI</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-text">
+          <strong>TaskMind AI</strong>
+          <span class="brand-tagline" data-i18n="tagline">Turn meeting notes into actionable tasks.</span>
+        </span>
+      </div>
+      <div class="lang-switcher">
+        <label for="languageSelect" data-i18n="languageLabel">Language</label>
+        <select id="languageSelect" aria-label="Language">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="hero-heading">
+      <p class="hero-kicker" data-i18n="heroKicker">AI task extraction</p>
+      <h1 id="hero-heading" data-i18n="heroTitle">Turn meeting notes into done.</h1>
+      <p class="hero-sub" data-i18n="heroSubtitle">Paste any meeting notes in Arabic, English, or French. Review what AI found, then save only what matters.</p>
+      <ol class="hero-steps" aria-label="How it works">
+        <li><span class="step-num" aria-hidden="true">1</span><span data-i18n="stepPaste">Paste notes</span></li>
+        <li><span class="step-num" aria-hidden="true">2</span><span data-i18n="stepExtract">Extract tasks</span></li>
+        <li><span class="step-num" aria-hidden="true">3</span><span data-i18n="stepSave">Review &amp; save</span></li>
+      </ol>
+    </section>
+
+    <section class="card notes-card" aria-labelledby="notes-heading">
+      <h2 id="notes-heading" data-i18n="notesTitle">Meeting notes</h2>
+      <label for="notesInput" data-i18n="notesLabel">Paste meeting notes or unstructured text</label>
+      <textarea
+        id="notesInput"
+        rows="10"
+        maxlength="8000"
+        placeholder="Paste your meeting notes here..."
+        aria-describedby="notes-help"
+        data-i18n-placeholder="notesPlaceholder"></textarea>
+      <p id="notes-help" class="help-text" data-i18n="notesHelp">Arabic, English, and French notes are supported. Task content keeps its original language.</p>
+      <div class="examples">
+        <span class="examples-label" data-i18n="examplesTitle">Try an example</span>
+        <div class="examples-row" id="examplesRow" role="group" aria-label="Example notes">
+          <button type="button" class="chip" data-example="example1">Example</button>
+          <button type="button" class="chip" data-example="example2">Example</button>
+          <button type="button" class="chip" data-example="example3">Example</button>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="extractBtn" type="button" class="btn-primary" data-i18n="extractBtn">Extract Tasks</button>
+      </div>
+      <p id="statusMsg" class="status-msg" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card" aria-labelledby="drafts-heading">
+      <div class="section-head">
+        <h2 id="drafts-heading" data-i18n="draftsTitle">Review extracted tasks</h2>
+        <p class="section-sub" data-i18n="draftsSub">Edit each card, then save what you keep.</p>
+      </div>
+      <p id="draftsEmpty" class="empty" data-i18n="draftsEmpty">No extracted tasks yet. Run extraction to review drafts before saving.</p>
+      <div id="drafts" class="cards"></div>
+    </section>
+
+    <section class="card" aria-labelledby="saved-heading">
+      <div class="section-head">
+        <h2 id="saved-heading" data-i18n="savedTitle">Saved tasks</h2>
+        <p class="section-sub" data-i18n="savedSub">Your saved actions across sessions.</p>
+      </div>
+      <p id="savedEmpty" class="empty" data-i18n="savedEmpty">No saved tasks yet.</p>
+      <div id="savedTasks" class="cards"></div>
+    </section>
+
+    <footer class="site-foot">
+      <p data-i18n="footNote">Built for clarity — your notes stay on this device, tasks keep their original language.</p>
+    </footer>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
