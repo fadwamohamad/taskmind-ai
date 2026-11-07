@@ -6,9 +6,27 @@ Turn messy meeting notes into clear, actionable tasks. Paste notes in Arabic, En
 
 Meeting notes mix discussion, decisions, and real actions. People lose track of what was actually agreed, who owns it, and by when. TaskMind AI turns that unstructured text into structured tasks with owner, due date, and priority, while keeping content in its original language.
 
-## Demo
+## Screenshots
 
-Screenshot gallery is pending capture (see [docs/screenshots/README.md](docs/screenshots/README.md) for exact shots to take). No mockups are committed.
+### English
+
+![English homepage](docs/screenshots/01-home-en.png)
+
+### Arabic (RTL)
+
+![Arabic homepage — RTL layout](docs/screenshots/02-home-ar-rtl.png)
+
+### French
+
+![French homepage](docs/screenshots/03-home-fr.png)
+
+### Extraction review
+
+![Extracted tasks review — title, priority, due date and assignee](docs/screenshots/04-extraction-review.png)
+
+### Saved tasks
+
+![Saved tasks interface — mark done and delete](docs/screenshots/05-saved-tasks.png)
 
 ## Features
 
