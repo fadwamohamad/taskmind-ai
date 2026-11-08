@@ -10,3 +10,4 @@ taskmind.db
 build/
 dist/
 *.log
+.vercel/

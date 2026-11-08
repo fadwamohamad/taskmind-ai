@@ -123,7 +123,7 @@ GEMINI_MODEL=gemini-3.5-flash-lite
 
 - `GEMINI_API_KEY`: server-only Gemini key (never exposed to browser).
 - `GEMINI_MODEL`: overridable (default `gemini-3.5-flash-lite`).
-- `DATABASE_URL`: optional override (default `sqlite:///./taskmind.db`).
+- `DATABASE_URL`: optional override (default `sqlite:///./taskmind.db`). For Neon, use `postgresql+psycopg://USER:PASSWORD@HOST/DB?sslmode=require` (Neon requires SSL; `app/db.py` normalizes `postgres://|postgresql://` to this form automatically).
 
 Without a key, `POST /api/extract` returns `503 AI service is not configured.`; CRUD still works.
 

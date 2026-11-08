@@ -1,0 +1,10 @@
+# Replace your-domain.example with your public domain (or use IP + Let's Encrypt via Caddy).
+# For IP-only HTTPS during setup, use the commented IP variant below.
+your-domain.example {
+	reverse_proxy 127.0.0.1:8000
+}
+
+# IP-only fallback (no domain required) — Caddy can issue a cert for the IP if allowed:
+# https://<VM_PUBLIC_IP> {
+# 	reverse_proxy 127.0.0.1:8000
+# }

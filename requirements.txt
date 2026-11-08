@@ -2,6 +2,7 @@ fastapi
 uvicorn[standard]
 sqlmodel
 pydantic>=2
+psycopg[binary]
 google-genai
 pytest
 httpx

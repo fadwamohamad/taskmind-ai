@@ -1,0 +1,13 @@
+[Unit]
+Description=TaskMind AI (FastAPI/Uvicorn)
+After=network.target
+
+[Service]
+Type=simple
+User=taskmind
+WorkingDirectory=/opt/taskmind
+EnvironmentFile=/opt/taskmind/.env
+ExecStart=/opt/taskmind/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=3
+# Caddy terminates TLS and proxies to 127.0.0.1:8000; app stays HTTP on localhost only.
